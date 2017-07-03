@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./src/Promise2.js"></script>
+</head>
+
+<body>
+    <script>
+        var a = new Promise((res, rej) => {
+            setTimeout(function() {
+                res(5)
+            }, 10000);
+        }).then(p => p * 5)
+        console.log(a.then(p => console.log(p - 5)));
+        console.log(a.then(p => console.log(p - 10)));
+        console.log(a.then(p => console.log(p - 15)));
+    </script>
+</body>
+
+</html>
